@@ -1,0 +1,296 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\playwright.config.ts",
+    "rootDir": "C:/Users/Samuel Jason Rain/Documents/whatsapp-automation/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Samuel Jason Rain/Documents/whatsapp-automation/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "WhatsApp Tests",
+        "name": "WhatsApp Tests",
+        "testDir": "C:/Users/Samuel Jason Rain/Documents/whatsapp-automation/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.spec.ts"
+        ],
+        "timeout": 180000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.2",
+    "workers": 4,
+    "webServer": {
+      "command": "npx playwright show-report",
+      "port": 9323,
+      "reuseExistingServer": true
+    }
+  },
+  "suites": [
+    {
+      "title": "onebox.spec.ts",
+      "file": "onebox.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "OneBox Messaging Tests",
+          "file": "onebox.spec.ts",
+          "line": 62,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should login and send message successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "WhatsApp Tests",
+                  "projectName": "WhatsApp Tests",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 45656,
+                      "error": {
+                        "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Send' })\u001b[22m\n",
+                        "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Send' })\u001b[22m\n\n    at DashboardPage.sendMessage (C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:58:27)\n    at C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:96:5",
+                        "location": {
+                          "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                          "column": 27,
+                          "line": 58
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 56 |\u001b[39m   \u001b[36masync\u001b[39m sendMessage(message\u001b[33m:\u001b[39m string) {\n \u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mmessageTextbox\u001b[33m.\u001b[39mfill(message)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msendButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m   }\n \u001b[90m 60 |\u001b[39m }\n \u001b[90m 61 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                            "column": 27,
+                            "line": 58
+                          },
+                          "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Send' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 56 |\u001b[39m   \u001b[36masync\u001b[39m sendMessage(message\u001b[33m:\u001b[39m string) {\n \u001b[90m 57 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mmessageTextbox\u001b[33m.\u001b[39mfill(message)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 58 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39msendButton\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 59 |\u001b[39m   }\n \u001b[90m 60 |\u001b[39m }\n \u001b[90m 61 |\u001b[39m\u001b[0m\n\u001b[2m    at DashboardPage.sendMessage (C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:58:27)\u001b[22m\n\u001b[2m    at C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:96:5\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-14T08:18:20.728Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\test-results\\onebox-OneBox-Messaging-Te-39784-d-send-message-successfully-WhatsApp-Tests\\video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                        "column": 27,
+                        "line": 58
+                      }
+                    },
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1811,
+                      "error": {
+                        "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'jssnnnnn. -' })\u001b[22m\n",
+                        "stack": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'jssnnnnn. -' })\u001b[22m\n\n    at DashboardPage.selectConversation (C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:53:67)\n    at C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:90:25",
+                        "location": {
+                          "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                          "column": 67,
+                          "line": 53
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 51 |\u001b[39m\n \u001b[90m 52 |\u001b[39m   \u001b[36masync\u001b[39m selectConversation(conversationName\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m conversationName })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m   }\n \u001b[90m 55 |\u001b[39m\n \u001b[90m 56 |\u001b[39m   \u001b[36masync\u001b[39m sendMessage(message\u001b[33m:\u001b[39m string) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                            "column": 67,
+                            "line": 53
+                          },
+                          "message": "Error: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'jssnnnnn. -' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 51 |\u001b[39m\n \u001b[90m 52 |\u001b[39m   \u001b[36masync\u001b[39m selectConversation(conversationName\u001b[33m:\u001b[39m string) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 53 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m conversationName })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 54 |\u001b[39m   }\n \u001b[90m 55 |\u001b[39m\n \u001b[90m 56 |\u001b[39m   \u001b[36masync\u001b[39m sendMessage(message\u001b[33m:\u001b[39m string) {\u001b[0m\n\u001b[2m    at DashboardPage.selectConversation (C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:53:67)\u001b[22m\n\u001b[2m    at C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:90:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-07-14T08:19:09.345Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\test-results\\onebox-OneBox-Messaging-Te-39784-d-send-message-successfully-WhatsApp-Tests-retry1\\video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\test-results\\onebox-OneBox-Messaging-Te-39784-d-send-message-successfully-WhatsApp-Tests-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                        "column": 67,
+                        "line": 53
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b018164f47857184f683-450c918c05682658d076",
+              "file": "onebox.spec.ts",
+              "line": 71,
+              "column": 7
+            },
+            {
+              "title": "should handle login with invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "WhatsApp Tests",
+                  "projectName": "WhatsApp Tests",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "interrupted",
+                      "duration": 2604,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Invalid')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Invalid')\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Invalid')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Invalid')\u001b[22m\n\n    at C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:105:48",
+                        "location": {
+                          "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                          "column": 48,
+                          "line": 105
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 103 |\u001b[39m     \n \u001b[90m 104 |\u001b[39m     \u001b[90m// Verify error message appears\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 105 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Invalid'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 106 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 107 |\u001b[39m\n \u001b[90m 108 |\u001b[39m   test(\u001b[32m'should validate required fields on login'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                            "column": 48,
+                            "line": 105
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: locator('text=Invalid')\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Invalid')\u001b[22m\n\n\n\u001b[0m \u001b[90m 103 |\u001b[39m     \n \u001b[90m 104 |\u001b[39m     \u001b[90m// Verify error message appears\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 105 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'text=Invalid'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 106 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 107 |\u001b[39m\n \u001b[90m 108 |\u001b[39m   test(\u001b[32m'should validate required fields on login'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\u001b[2m    at C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts:105:48\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-07-14T08:19:12.709Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\test-results\\onebox-OneBox-Messaging-Te-e149e-in-with-invalid-credentials-WhatsApp-Tests\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\test-results\\onebox-OneBox-Messaging-Te-e149e-in-with-invalid-credentials-WhatsApp-Tests\\video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Samuel Jason Rain\\Documents\\whatsapp-automation\\tests\\onebox.spec.ts",
+                        "column": 48,
+                        "line": 105
+                      }
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b018164f47857184f683-86d71139135e02170609",
+              "file": "onebox.spec.ts",
+              "line": 99,
+              "column": 7
+            },
+            {
+              "title": "should validate required fields on login",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 180000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "WhatsApp Tests",
+                  "projectName": "WhatsApp Tests",
+                  "results": [],
+                  "status": "skipped"
+                }
+              ],
+              "id": "b018164f47857184f683-22833927662fcb064814",
+              "file": "onebox.spec.ts",
+              "line": 108,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-07-14T08:18:17.725Z",
+    "duration": 58300.816,
+    "expected": 0,
+    "skipped": 2,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
