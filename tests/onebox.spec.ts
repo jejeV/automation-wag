@@ -1,6 +1,5 @@
 import { test, expect, Page } from '@playwright/test';
 
-// Constants untuk data test
 const TEST_DATA = {
   baseUrl: 'https://staging.onebox.co.id',
   credentials: {
@@ -101,23 +100,19 @@ test.describe('OneBox Messaging Tests', () => {
     
     await loginPage.login('invalid@email.com', 'wrongpassword');
     
-    // Verify error message appears
     await expect(page.locator('text=Invalid')).toBeVisible();
   });
 
   test('should validate required fields on login', async ({ page }) => {
     await loginPage.goto();
     
-    // Try to login without filling fields
     await loginPage.loginButton.click();
     
-    // Verify validation messages
     await expect(page.locator('text=Email is required')).toBeVisible();
     await expect(page.locator('text=Password is required')).toBeVisible();
   });
 });
 
-// Utility functions untuk reusable actions
 export class TestUtils {
   static async waitForElement(page: Page, selector: string, timeout = 5000) {
     await page.waitForSelector(selector, { timeout });
@@ -131,4 +126,5 @@ export class TestUtils {
     await page.fill(selector, '');
     await page.fill(selector, text);
   }
+
 }
